@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160f27">
+  <title>Um segredo nosso ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main>
+    <section id="tela-senha" class="screen active">
+      <div class="moon" aria-hidden="true">☾</div>
+      <div class="heart big-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">UM SEGREDO NOSSO</p>
+      <h1>Um pequeno segredo...</h1>
+      <p class="intro">Se você chegou até aqui, talvez saiba a resposta. 💗</p>
+      <form id="form-senha">
+        <label for="senha">Digite nossa data secreta</label>
+        <input id="senha" type="text" inputmode="numeric" autocomplete="off"
+               placeholder="DD/MM" maxlength="5" aria-describedby="erro">
+        <button class="primary" type="submit">🔒 Desbloquear</button>
+        <p id="erro" class="error" role="status" aria-live="polite"></p>
+      </form>
+      <p class="footnote">Uma data, uma memória, uma surpresa...</p>
+    </section>
+
+    <section id="tela-carta" class="screen hidden">
+      <div class="envelope" aria-hidden="true">💌</div>
+      <p class="eyebrow">FEITO ESPECIALMENTE PARA VOCÊ</p>
+      <h1>Uma cartinha para você</h1>
+      <article class="letter">
+        <div class="letter-heart">♡</div>
+        <h2>Para minha princesa,</h2>
+        <p>Quem diria que uma calopsita gordinha seria o começo de uma história tão especial? KKKKK ❤️</p>
+        <p>A gente começou de um jeito engraçado, virou amizade e, quando percebemos, já éramos duas pessoas que se amavam.</p>
+        <p>Hoje, quero dar mais um passo com você. Porque, entre tantas coisas inesperadas que poderiam acontecer, conhecer você foi uma das minhas favoritas.</p>
+        <p class="highlight">Eu amo você, minha princesa. E quero continuar escrevendo nossa história ao seu lado. 💗</p>
+        <p class="signature">Com carinho, de alguém que te ama ♡</p>
+      </article>
+      <button id="ir-pedido" class="primary">Tem mais uma coisinha… 💗</button>
+    </section>
+
+    <section id="tela-pedido" class="screen hidden">
+      <div class="heart big-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">NOSSO PRÓXIMO CAPÍTULO</p>
+      <h1>Minha princesa...</h1>
+      <p class="proposal">Quer namorar comigo? ❤️</p>
+      <div class="answers">
+        <button id="sim" class="primary">💖 Sim!</button>
+        <button id="ainda-nao" class="secondary">Ainda não…</button>
+      </div>
+      <p id="resposta" class="response" aria-live="polite"></p>
+      <p class="footnote">Não importa a resposta, obrigado por fazer parte da minha história. ♡</p>
+    </section>
+
+    <section id="tela-final" class="screen hidden">
+      <div class="heart big-heart" aria-hidden="true">♥</div>
+      <p class="eyebrow">UM NOVO CAPÍTULO</p>
+      <h1>EU TE AMO! 💗</h1>
+      <p class="intro">Que essa seja uma de muitas lembranças bonitas que ainda vamos criar juntos.</p>
+      <div class="confetti" aria-hidden="true">♡ ✦ ♥ ✧ ♡ ✦ ♥</div>
+      <p class="signature">Sua pessoa favorita (espero KKKK) ♡</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

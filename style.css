@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --pink: #ff79bd;
+  --pink-light: #ffc0df;
+  --purple: #251639;
+  --cream: #fff2e4;
+  --ink: #42273c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: #fff3fb;
+  font-family: 'Nunito', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 18% 18%, #51235d 0, transparent 28%),
+    radial-gradient(circle at 80% 75%, #722c68 0, transparent 27%),
+    linear-gradient(145deg, #100d20, #251331 55%, #401a43);
+  display: grid; place-items: center; overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .45;
+  background-image: radial-gradient(#fff 1px, transparent 1px), radial-gradient(#ffc7e4 1px, transparent 1px);
+  background-size: 73px 73px, 113px 113px; background-position: 0 0, 28px 39px;
+}
+main { width: min(100% - 28px, 620px); padding: 26px 0; position: relative; z-index: 1; }
+.screen {
+  position: relative; text-align: center; padding: clamp(24px, 6vw, 48px);
+  border: 1px solid rgba(255, 190, 225, .28); border-radius: 28px;
+  background: rgba(18, 12, 32, .64); box-shadow: 0 20px 80px #09061180;
+  backdrop-filter: blur(12px); animation: appear .7s ease both;
+}
+.hidden { display: none !important; }
+.moon { position: absolute; top: 20px; right: 25px; font-size: 36px; color: #ffb7e0; }
+.heart { color: var(--pink); text-shadow: 0 0 25px #ff5eb6; }
+.big-heart { font-size: 76px; line-height: 1; animation: pulse 2s infinite; margin-bottom: 12px; }
+.eyebrow { color: #ffabd7; letter-spacing: .18em; font-size: .72rem; font-weight: 800; }
+h1 { font: 600 clamp(2rem, 8vw, 3rem)/1.12 'Playfair Display', Georgia, serif; margin: 10px 0 16px; }
+.intro { line-height: 1.7; color: #f0d9eb; }
+form { display: grid; gap: 12px; text-align: left; margin: 28px auto 0; max-width: 340px; }
+label { color: #f6d8ec; font-size: .9rem; }
+input {
+  width: 100%; padding: 15px 18px; border-radius: 13px; border: 1px solid #e68ac0;
+  background: #1b1429; color: white; font: 700 1.3rem 'Nunito', sans-serif;
+  text-align: center; letter-spacing: .15em; outline: none;
+}
+input:focus { box-shadow: 0 0 0 3px #ff79bd44; }
+button { font: 800 1rem 'Nunito', sans-serif; cursor: pointer; border: 0; transition: transform .18s, filter .18s; }
+button:hover { transform: translateY(-2px); filter: brightness(1.06); }
+button:active { transform: scale(.98); }
+.primary { padding: 14px 22px; border-radius: 999px; color: #37132c; background: linear-gradient(110deg, #ffc1e0, #ff70b9); box-shadow: 0 7px 25px #ff5eaf35; }
+.secondary { padding: 13px 22px; border-radius: 999px; color: #ffe4f3; border: 1px solid #d888b7; background: #291a35; }
+.error { color: #ffb6cf; text-align: center; min-height: 1.3em; margin: 0; font-size: .9rem; }
+.footnote { color: #c7a8c6; font-size: .8rem; margin-top: 28px; }
+.envelope { font-size: 60px; animation: float 2.8s ease-in-out infinite; }
+.letter {
+  text-align: left; margin: 25px 0; padding: clamp(22px, 5vw, 36px);
+  color: var(--ink); background: var(--cream); border-radius: 7px 22px 7px 22px;
+  box-shadow: 0 8px 0 #d7a5bc; position: relative; line-height: 1.7;
+  background-image: repeating-linear-gradient(transparent 0 31px, #e7d4d2 32px);
+}
+.letter-heart { text-align: center; color: #d95b8d; font-size: 30px; }
+.letter h2 { font: 700 1.5rem 'Playfair Display', Georgia, serif; text-align: center; color: #8d3e62; margin: 8px 0 20px; }
+.letter p { margin: 0 0 16px; }
+.letter .highlight { color: #9d315f; font-weight: 800; }
+.signature { text-align: right; color: #a34270; font-family: 'Playfair Display', Georgia, serif; font-style: italic; }
+#ir-pedido { margin-top: 4px; }
+.proposal { font: 600 clamp(1.8rem, 7vw, 2.6rem) 'Playfair Display', Georgia, serif; color: #ffd6eb; margin: 24px 0; }
+.answers { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.response { min-height: 1.5em; color: #ffd1e7; }
+.confetti { color: #ff8bc6; font-size: 2rem; letter-spacing: .3em; animation: float 2.5s ease-in-out infinite; margin: 28px 0; }
+@keyframes appear { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@media (max-width: 420px) {
+  main { width: min(100% - 18px, 620px); }
+  .screen { padding: 24px 18px; border-radius: 22px; }
+  .letter { padding: 22px 18px; }
+}
